@@ -1,0 +1,105 @@
+@bg-color: #b7d4a8;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	#main {
+		width: 360px;
+		height: 420px;
+		padding: 16px;
+		background-color: @bg-color;
+		border: 10px solid #000;
+		border-radius: 30px;
+		box-shadow: rgb(188, 188, 188) 5px 20px 30px 3px;
+		transition: all 0.5s;
+		// 绝对居中
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 150px;
+		margin: auto;
+
+		// 动画
+		&:hover {
+			background-color: #deffcd;
+		}
+
+		#screen {
+			width: 304px;
+			height: 304px;
+			border: 2px solid #000;
+			margin: auto;
+			position: relative;
+
+			#food {
+				width: 10px;
+				height: 10px;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				align-content: space-between;
+				// 子绝父相
+				position: absolute;
+				left: 0px;
+				top: 0px;
+
+				& > div {
+					width: 4px;
+					height: 4px;
+					background-color: #000;
+					transform: rotate(45deg);
+				}
+			}
+
+			#snake {
+				& > div {
+					width: 10px;
+					height: 10px;
+					border: 1px solid @bg-color;
+					background-color: #000;
+					// 子绝父相
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+			}
+		}
+		#text {
+			margin-top: 33px;
+			display: flex;
+			justify-content: space-between;
+			font-size: 20px;
+			font-family: "Courier New", Courier, monospace;
+			font-weight: bold;
+		}
+	}
+
+	#btn {
+		width: 110px;
+		height: 40px;
+		background-color: red;
+		color: white;
+		border: rgb(228, 228, 228) solid 2px;
+		box-shadow: rgb(188, 188, 188) 3px 3px 4px 1px;
+		border-radius: 10px;
+		position: absolute;
+		left: 0;
+		top: 500px;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		transition: all 0.2s;
+		font-size: 20px;
+		font-family: "Courier New", Courier, monospace;
+		font-weight: bold;
+
+		&:hover {
+			background-color: rgb(240, 0, 0);
+		}
+	}
+}
